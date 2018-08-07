@@ -1,0 +1,42 @@
+<svg class="my_svg" viewBox="0 0 300 415" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		.my_svg{
+			width: 400px;
+			height: 400px;
+			margin: auto;
+			margin-top: 200px;
+		}
+		.text{
+			stroke: #455;
+			font-size: 55px;
+			transition: .5s;
+			animation: an_t 3s infinite alternate;
+		}
+		.line {
+			fill: transparent;
+			stroke-width: 7px;
+			stroke-dashoffset: 1500;
+			animation: an_l 5s infinite alternate;
+		}
+		@keyframes an_t{
+			from{
+				fill: #fff;
+			}
+			to {
+				fill" #455;
+			}
+		}
+		@keyframes an_l {
+			from{
+				stroke-dasharray: 1500;
+				stroke: #000;
+			}
+			to{
+				stroke-dasharray: 100;
+				stroke: #a45;
+			}
+		}
+	</style>
+	<text class="text" x="5%" y="25%" dy="0">Тестовое svg</text>
+	<path class="line" d="M0,0h350v200h-350v-200z"/>
+</svg>

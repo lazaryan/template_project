@@ -1,5 +1,4 @@
 "use strict";
-
 /*общие*/
 const gulp          = require('gulp');
 const browserSync   = require('browser-sync');
@@ -25,6 +24,7 @@ const imgmin        = require('gulp-imagemin');
 const htmlmin       = require('gulp-htmlmin');
 const fileinclude   = require('gulp-file-include')
 const useref        = require('gulp-useref');
+//const ejs           = require('gulp-ejs');
 
 // Автоперезагрузка при изменении файлов в папке `dist`:
 // Принцип: меняем файлы в `/src`, они обрабатываются и переносятся в `dist` и срабатывает автоперезагрузка.
@@ -66,15 +66,15 @@ gulp.task('fonts', () => {
 });
 
 gulp.task('img', () => {
-    gulp.src('src/img/**/*.*')
+    gulp.src('src/images/**/*.*')
         .pipe(gulpif(!IsDevelopment, imgmin({
             interlaced: true
         })))
-        .pipe(gulp.dest('./dist/img'));
+        .pipe(gulp.dest('./dist/images'));
 });
 
 gulp.task('js', () => {
-    gulp.src('src/js/**/*.*')
+    gulp.src('src/js/**/[^_]*.js')
         .pipe(babel({
             presets: ['env']
         }))
@@ -105,7 +105,7 @@ gulp.task('html:build', () => {
 gulp.task('watch', () => {
     gulp.watch('src/sass/**/*.+(sass|scss)', ['styles']);
     gulp.watch('src/**/*.+(html|php)', ['html:build', 'html']);
-    gulp.watch('src/img/**/*.*', ['img']);
+    gulp.watch('src/images/**/*.*', ['img']);
     gulp.watch('src/js/**/*.*', ['js']);
     gulp.watch('src/font/**/*.*', ['font']);
 });

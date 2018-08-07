@@ -1,5 +1,24 @@
-@import "media"
+@import "./variables/media"
+@import "./variables/colors"
 
 *
 	margin: 0
 	padding: 0
+	font-family: 'Century Gothic', sans-serif
+
+#id
+	background-color: $color_body
+
+.content
+	width: 100%
+	padding: 0 20px
+	box-sizing: border-box
+	margin-bottom: 80px
+
+.information
+	width: 100%
+
+	@media #{$desktop}
+		width: 80%
+		max-width: 1200px
+		margin: auto

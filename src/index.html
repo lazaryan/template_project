@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta   charset="UTF-8">
-        <meta   charset="UTF-8">
-        <meta   name="viewport"
-                content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta   http-equiv="X-UA-Compatible"
-                content="ie=edge">
+        <!--meta teg-->
+        @@include('template_html/_meta.html')
 
         <title>Project</title>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="sass/lib/normalize.scss" />
+        <link rel="stylesheet" href="sass/general/font.scss" />
+        <link rel="stylesheet" href="sass/main.sass" />
 </head>
 <body>
-
-
-
-        <script src="main.js"></script>
+<!--[if ite IE 8]>
+<script>
+@@include('js/support/_addEventListener.js')
+<script>
+<![endif]-->
+        <img src="images/test.svg">
+        <script src="js/main.js"></script>
 </body>
 </html>
