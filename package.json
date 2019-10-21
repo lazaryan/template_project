@@ -14,7 +14,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.18.11",
-    "eslint": "^3.19.0",
+    "eslint": "^6.5.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-csso": "^3.0.1",
